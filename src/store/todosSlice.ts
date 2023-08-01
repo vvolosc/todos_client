@@ -18,13 +18,10 @@ export const fetchTodos = createAsyncThunk('todos/fetchAll', async () => {
   return response.data
 })
 
-export const searchTodos = createAsyncThunk(
-  'todos/searchAll',
-  async (text: string) => {
-    const response = await todos.searchAll(text)
-    return response.data
-  }
-)
+export const searchTodos = createAsyncThunk('todos/searchAll', async (text: string) => {
+  const response = await todos.searchAll(text)
+  return response.data
+})
 
 export const addTodo = createAsyncThunk('todos/add', async (title: string) => {
   await todos.add(title)

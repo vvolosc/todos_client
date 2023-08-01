@@ -7,7 +7,7 @@ export const DeleteControl = () => {
 
   return (
     <button
-      className="underline underline-offset-2 text-blue-700 text-sm"
+      className="text-sm text-blue-700 underline underline-offset-2"
       onClick={() => dispatch(deleteTodos())}
     >
       Delete all tasks

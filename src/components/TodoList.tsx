@@ -9,8 +9,8 @@ interface TodoListProps {
 
 export const TodoList = ({ title, todos }: TodoListProps) => {
   return (
-    <div className="flex flex-col">
-      <span className="text-2xl border-b-2 border-slate-500">{title}</span>
+    <div className="flex grow flex-col">
+      <span className="border-b-2 border-slate-500 text-2xl">{title}</span>
       {todos.map((todo) => (
         <TodoItem key={todo._id} {...todo} />
       ))}

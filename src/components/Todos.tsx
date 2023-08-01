@@ -16,20 +16,28 @@ export const Todos = () => {
   }, [dispatch])
 
   return (
-    <div className="flex flex-col m-8 p-8 border-solid border rounded border-slate-500">
-      <div className="flex flex-row justify-between">
-        <p className="text-4xl font-medium">Marvelous v2.0</p>
-        <DeleteControl />
+    <div className="container mx-auto mt-6">
+      <div className="content-row">
+        <div className="content-col">
+          <p className="text-center text-4xl font-medium md:text-left">Marvelous v2.0</p>
+        </div>
+        <div className="content-col">
+          <DeleteControl />
+        </div>
       </div>
-      <div className="flex flex-row justify-between py-8">
-        <AddControl />
-        <SearchControl />
+      <div className="content-row">
+        <div className="content-col">
+          <AddControl />
+        </div>
+        <div className="content-col">
+          <SearchControl />
+        </div>
       </div>
-      <div className="flex flex-row justify-between pt-4">
-        <div className="basis-1/2 pr-8">
+      <div className="content-row">
+        <div className="content-col grow basis-full p-0 md:basis-1/2 md:pr-8">
           <TodoList title="To do" todos={todos.notCompleted} />
         </div>
-        <div className="basis-1/2 pl-8">
+        <div className="content-col grow basis-full p-0 md:basis-1/2 md:pl-8">
           <TodoList title="Done" todos={todos.completed} />
         </div>
       </div>

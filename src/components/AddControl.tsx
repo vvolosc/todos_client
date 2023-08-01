@@ -12,13 +12,9 @@ export const AddControl = () => {
 
   return (
     <div>
-      <input
-        className="border-solid border rounded border-slate-500 p-2"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
       <button
-        className="bg-sky-500/75 px-4 py-2 rounded border-solid border rounded border-slate-500 ml-4"
+        className="ml-4 rounded rounded border border-solid border-slate-500 bg-sky-500/75 px-4 py-2"
         onClick={add}
       >
         Add
